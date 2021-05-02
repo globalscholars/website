@@ -1,7 +1,48 @@
 <html>
 <head>
+<title>Greetings</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,900;1,100;1,900&amp;display=swap" rel="stylesheet">
+<!-- <link href="./Javascript%20Fun.css" rel="stylesheet"> now replaced with internal CSS-->
+<link href="https://media.discordapp.net/attachments/771319815658536970/820992315182678036/emojipng.com-40627.png" rel="icon">
+<style> html{background:var(--bg-color);color:var(--text-color)}body{padding:calc(10vw - 15px)}p{font-family:Bitter,Rockwell,sans-serif;font-size:35px;max-width:600px;margin-block-start:10px;font-variation-settings:"wght" 900;font-weight:900}p.decorative{overflow-x:hidden;color:var(--dim-gray);font-size:200px;position:absolute;right:0;user-select:none;top:328px;overflow:hidden;font-style:italic;word-break:keep-all;transition:.2s;z-index:-1}p.decorative:hover{font-variation-settings:"wght" 200}small{letter-spacing:1px;text-transform:uppercase;font-family:Bitter,Rockwell,sans-serif;font-size:16px;font-variation-settings:"wght" 600!important;color:var(--text-color);user-select:none}@media screen and (max-width:400px){p.decorative{font-size:100px}}@media screen and (max-width:300px){p.decorative{visibility:hidden}p{font-size:28px;font-variation-settings:"wght" 800}}::selection{background:var(--selection-bg);color:var(--selection-color)}@media (prefers-color-scheme:light){:root{--bg-color:hsl(0deg 0% 93%);--text-color:hsl(0, 0%, 13%);--selection-bg:black;--selection-color:hsl(43deg 100% 65%);--dim-gray:hsl(0deg 0% 86%)}html{transition:.3s}}@media (prefers-color-scheme:dark){:root{--bg-color:hsl(0, 0%, 13%);--text-color:hsl(0deg 0% 71%);--selection-bg:hsl(0deg 0% 16%);--selection-color:hsl(0deg 0% 58%);--dim-gray:hsl(0deg 0% 16%)}html{transition:.3s}}</style>
 </head>
-<body>
-  <p>Hello.</p>
+
+<body onload="greeting()">
+
+<small id="time-greeting">Good evening 🌝</small>
+
+<p id="greeting">Dumbo! You either did not answer the question or you cancelled the prompt. You will get due punishment.</p>
+
+<p class="decorative">abcdefghijklmnopqr</p>
+
+<script>
+function greeting() {
+  var txt;
+  var person = prompt("Please enter your name:", "Donald Trump");
+  if (person == null || person == "") {
+    txt = "Dumbo! You either did not answer the question or you cancelled the prompt. You will get due punishment.";
+  } 
+  else if (person == "fucking idiot" || person == "fuck" || person == "bitch" || person == "wanker" || person == "idiot" || person == "dumbo" ) {
+    txt = "NO BAD WORDS!!! You will get due punishment.";
+  } 
+  else {
+    txt = "Howdy, " + person + "! How’re you today?"; 
+  }
+
+  var greeting;
+  var time = new Date().getHours();
+  if (time < 12) {
+    greeting = "Good morning 🌞";
+  } else if (time < 17) {
+    greeting = "Good afternoon 🕐";
+  } else {
+    greeting = "Good evening 🌝";
+  }
+  document.getElementById("greeting").innerHTML = txt;
+  document.getElementById("time-greeting").innerHTML = greeting;
+}
+</script>
+
 </body>
+
 </html>
