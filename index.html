@@ -8,42 +8,17 @@ x<html>
 
 <body onload="greeting()">
 
-<small id="time-greeting">Good evening 🌝</small>
+<small id="time-greeting"></small>
 
 <p id="greeting">Dumbo! You either did not answer the question or you cancelled the prompt. You will get due punishment.</p>
 <small><a href="https://globalscholars.github.io/website/about.html">About this website</a></small>
 
 <p class="decorative">abcdefghijklmnopqr</p>
 
-<script>
-function greeting() {
-  var txt;
-  var person = prompt("Please enter your name:", "Donald Trump");
-  if (person == null || person == "") {
-    txt = "Dumbo! You either did not answer the question or you cancelled the prompt. You will get due punishment.";
-  } 
-  else if (person == "fucking idiot" || person == "fuck" || person == "bitch" || person == "wanker" || person == "idiot" || person == "dumbo" ) {
-    txt = "NO BAD WORDS!!! You will get due punishment.";
-  } 
-  else {
-    txt = "Howdy, " + person + "! How’re you today?"; 
-  }
-
-  var greeting;
-  var time = new Date().getHours();
-  if (time < 12) {
-    greeting = "Good morning 🌞";
-  } else if (time < 17) {
-    greeting = "Good afternoon 🕐";
-  } else {
-    greeting = "Good evening 🌝";
-  }
-  document.getElementById("greeting").innerHTML = txt;
-  document.getElementById("time-greeting").innerHTML = greeting;
-}
-</script>
+<script src="https://raw.githubusercontent.com/globalscholars/website/main/main.js"></script>
 
 <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+
 </body>
 
 </html>
